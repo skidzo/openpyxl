@@ -1,0 +1,10 @@
+image: openpyxl/openpyxl-ci
+
+pipelines:
+  default:
+    - step:
+        script:
+          - pip install -U -r requirements.txt
+          - pip --version
+          - tox --version
+          - tox -- -xrf openpyxl
